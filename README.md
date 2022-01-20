@@ -3,6 +3,10 @@
 You will need node installed on your computer for this application
 ### If packages are not configured properly when you clone
 >npm install express mysql cors --save
+
+### To run server
+>node server.js
+>
 ### Overview
 This is a CRUD API built using Node+Express and mySQL running on port 8080 on Localhost.
 
