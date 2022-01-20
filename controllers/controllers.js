@@ -16,8 +16,10 @@ exports.create = (req, res) => {
       description: req.body.description,
       price: req.body.price,
       count: req.body.count,
-      image_src: req.body.src || NULL
+      image_src: req.body.src || null      
     });
+
+    console.log(inventoryItem.image_src);
   
     // Save Inventory in the database
     Inventory.create(inventoryItem, (err, data) => {
