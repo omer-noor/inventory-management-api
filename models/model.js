@@ -37,7 +37,7 @@ Inventory.findById = (id, result) => {
       return;
     }
 
-    // not found Inventory with the id
+    // Could not find the inventory with the id
     result({ kind: "not_found" }, null);
   });
 };
@@ -61,12 +61,11 @@ Inventory.getAll = (itemname, result) => {
   });
 };
 
-Inventory.filterBy = (filterCriteria, type, result) => {
-    console.log(filterCriteria,type,result);
+//Function to filter by description,name,count and price
+Inventory.filterBy = (filterCriteria, type, result) => {    
     let query = "SELECT * FROM inventory";
   
-    if (type==="description") {
-        console.log(type,"HERE");
+    if (type==="description") {        
       query += ` WHERE description LIKE '%${filterCriteria}%'`;
     }
     else if (type==="name"){
@@ -104,7 +103,7 @@ Inventory.updateById = (id, Inventory, result) => {
       }
 
       if (res.affectedRows == 0) {
-        // not found Inventory with the id
+        // Could not find the inventory with the id
         result({ kind: "not_found" }, null);
         return;
       }
@@ -124,7 +123,7 @@ Inventory.remove = (id, result) => {
     }
 
     if (res.affectedRows == 0) {
-      // not found Inventory with the id
+      // Could not find the inventory with the id
       result({ kind: "not_found" }, null);
       return;
     }

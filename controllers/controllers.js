@@ -63,8 +63,7 @@ exports.filterResults = (req, res) => {
     if (req.query.price) {        
         filterBy=req.query.price; 
         type="price";
-    }   
-    console.log(type,"Type is");
+    }       
     Inventory.filterBy(filterBy,type, (err, data) => {
       if (err)
         res.status(500).send({
