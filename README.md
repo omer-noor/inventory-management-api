@@ -2,7 +2,7 @@
 
 You will need node installed on your computer for this application
 ### If packages are not configured properly when you clone
->npm install express mysql cors --save
+>npm install
 
 ### To run server
 >node server.js
@@ -54,7 +54,11 @@ Update a inventory item by ID
 
 >localhost:8080/api/inventory/:id
 
+# Testing
 
+Implemented unit tests for CRUD functionality using Jest and Supertest
+
+> npm test
 
 
 
